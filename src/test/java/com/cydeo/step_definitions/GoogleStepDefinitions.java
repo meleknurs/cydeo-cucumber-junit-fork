@@ -13,7 +13,7 @@ public class GoogleStepDefinitions {
 
     @When("user types apple and clicks enter")
     public void user_types_and_clicks_enter2() {
-        googleSearchPage.acceptCookies.click();
+
         googleSearchPage.searchBox.sendKeys("apple" + Keys.ENTER);
     }
 
@@ -53,7 +53,7 @@ public class GoogleStepDefinitions {
     public void user_is_on_google_search_page() {
 
         Driver.getDriver().get("https://www.google.com");
-
+        googleSearchPage.acceptCookies.click();
     }
 
     @Then("user should see title is Google")
